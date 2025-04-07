@@ -11,7 +11,7 @@
                 <p class="text-center">Aquí podrás gestionar tu actividad.</p>
 
                 <div class="panel-buttons">
-                    <a href="{{ route('dashboard') }}" class="">Dar alta docente</a>
+                    <a href="{{ route('alta_docente') }}" class="">Dar alta docente</a>
                     <a href="{{ route('dashboard') }}">Establecer coordinador/es</a>
                     <a href="{{ route('dashboard') }}">Establecer tutor/es</a>
                     <a href="{{ route('dashboard') }}">Establecer docencia</a>
