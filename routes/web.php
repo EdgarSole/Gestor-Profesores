@@ -25,4 +25,12 @@ Route::post('/alta-docente', [AltaDocenteController::class, 'store'])
     ->middleware('auth')
     ->name('alta_docente.store');
 
+Route::get('/alta-docente', [AltaDocenteController::class, 'create'])
+    ->middleware('auth')
+    ->name('alta_docente');
+
+Route::post('/alta-docente', [AltaDocenteController::class, 'store'])
+    ->middleware('auth')
+    ->name('alta_docente.store');
+
 require __DIR__.'/auth.php';
