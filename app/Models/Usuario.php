@@ -2,7 +2,6 @@
 
 namespace App\Models;
 
-// use Illuminate\Contracts\Auth\MustVerifyEmail;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Foundation\Auth\User as Authenticatable;
 use Illuminate\Notifications\Notifiable;
@@ -24,8 +23,9 @@ class Usuario extends Authenticatable
      * @var array<string>
      */
     protected $fillable = [
-        'nombre',   
+        'nombre',
         'password',
+         
     ];
 
     /**
@@ -48,5 +48,13 @@ class Usuario extends Authenticatable
         return [
             'password' => 'hashed',
         ];
+    }
+
+    /**
+     * Relación: un usuario pertenece a un centro
+     */
+    public function centro()
+    {
+        return $this->belongsTo(Centro::class, 'id_centro');
     }
 }
